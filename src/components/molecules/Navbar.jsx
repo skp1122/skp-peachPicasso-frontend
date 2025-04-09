@@ -1,10 +1,17 @@
 import { useState } from 'react';
 import Button from '../atoms/Button';
 import logo from '../../assets/iconPeachPicasso.svg';
+import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/solid';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const phoneNumber = "+917549205741";
+
+  const handleWhatsAppClick = () => {
+    const message = 'Hello! I would like to book an appointment for makeup services.';
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   const navLinks = [
     { title: 'Why Choose Us', href: '#why-choose-us' },
@@ -45,17 +52,21 @@ const Navbar = () => {
             <Button
               text={phoneNumber}
               width={184}
-              showCopyFeature={true}
-            />
+              onClick={handleWhatsAppClick}
+            >
+              <ChatBubbleOvalLeftEllipsisIcon className="w-5 h-5 text-white" />
+            </Button>
           </div>
 
           {/* Mobile Contact + Hamburger */}
           <div className="flex items-center md:hidden space-x-2">
             <Button
               text={phoneNumber}
-              showCopyFeature={true}
               className="!text-[14px] !px-2"
-            />
+              onClick={handleWhatsAppClick}
+            >
+              <ChatBubbleOvalLeftEllipsisIcon className="w-4 h-4 text-white" />
+            </Button>
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md text-black hover:bg-gray-100 focus:outline-none"

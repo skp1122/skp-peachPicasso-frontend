@@ -1,10 +1,15 @@
 import Button from '../atoms/Button';
 import Text from '../atoms/Text';
 import heroImage from '../../assets/heroSection1.png';
+import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/solid';
 
 const HeroSection = () => {
   const handleBooking = () => {
-    console.log('Booking appointment...');
+    // WhatsApp Business API URL
+    const phoneNumber = '917549205741'; // Your WhatsApp number without '+' or spaces
+    const message = 'Hello! I would like to book an appointment for makeup services.';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -36,15 +41,23 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Button */}
-          <div>
+          {/* Button with Tooltip */}
+          <div className="relative group">
             <Button
-              text="Book Your Appointment"
+              text="Book your appointment"
               onClick={handleBooking}
               align="left"
-              width={280}
-              className="text-md sm:text-lg"
-            />
+              width={320}
+              className="text-md sm:text-lg hover:scale-105 transition-transform duration-200"
+            >
+              <ChatBubbleOvalLeftEllipsisIcon className="w-5 h-5 text-white" />
+            </Button>
+            {/* Tooltip */}
+            <div className="absolute left-0 -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              <span className="text-white/80 text-xs tracking-wide">
+                Chat with us on WhatsApp
+              </span>
+            </div>
           </div>
         </div>
 

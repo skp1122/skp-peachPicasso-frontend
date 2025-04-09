@@ -4,7 +4,7 @@ import Services from '../molecules/Services';
 const ServicesSection = () => {
   return (
     <Section
-      id="services"
+      id="our-services"
       title="Our Services"
     >
       <Services />

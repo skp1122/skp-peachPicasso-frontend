@@ -1,0 +1,14 @@
+[user]
+    name = Suryansh Kumar
+    email = skp1108rnc@gmail.com
+[core]
+    editor = code
+    autocrlf = input
+[init]
+    defaultBranch = main
+[color]
+    ui = auto
+[pull]
+    rebase = false
+[push]
+    default = simple 

@@ -1,0 +1,60 @@
+.
+├── README.md
+├── eslint.config.js
+├── hairStyling.png
+├── index.html
+├── package.json
+├── project-tree.txt
+├── public
+│   └── iconPeachPicasso.svg
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── aboutUs.png
+│   │   ├── clients
+│   │   │   ├── amaya.png
+│   │   │   ├── kavya.png
+│   │   │   └── priya.png
+│   │   ├── heroSection1.png
+│   │   ├── icons
+│   │   │   ├── experiencedStylist.svg
+│   │   │   ├── personalisedService.svg
+│   │   │   └── yearsOfExperienceBadge.svg
+│   │   └── serviceImages
+│   │       ├── bridalMakup.png
+│   │       ├── facialPic.png
+│   │       ├── hairStyling.png
+│   │       ├── naturalMakeup.png
+│   │       └── partyMakeup.png
+│   ├── components
+│   │   ├── HeroSection.jsx
+│   │   ├── atoms
+│   │   │   ├── Button.jsx
+│   │   │   ├── ClientStory.jsx
+│   │   │   ├── FeatureCard.jsx
+│   │   │   ├── SectionTitle.jsx
+│   │   │   ├── ServiceCard.jsx
+│   │   │   └── Text.jsx
+│   │   ├── molecules
+│   │   │   ├── AboutUs.jsx
+│   │   │   ├── ClientStories.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── HeroSection.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Services.jsx
+│   │   │   └── WhyChooseUs.jsx
+│   │   └── organisms
+│   │       ├── AboutUsSection.jsx
+│   │       ├── ClientStoriesSection.jsx
+│   │       ├── Section.jsx
+│   │       ├── ServicesSection.jsx
+│   │       └── WhyChooseUsSection.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── pages
+│       └── Home.jsx
+├── tailwind.config.js
+└── vite.config.js
+
+12 directories, 46 files

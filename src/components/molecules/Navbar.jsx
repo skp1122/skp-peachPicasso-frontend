@@ -29,7 +29,7 @@ const Navbar = () => {
           
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <a href="/skp-peachPicasso-frontend/" className="flex items-center">
               <img
                 src={logo}
                 alt="Peach Picasso Logo"

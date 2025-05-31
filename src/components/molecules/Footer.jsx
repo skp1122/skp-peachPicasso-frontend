@@ -1,3 +1,5 @@
+import { siteConfig } from '../../config/siteConfig';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -10,13 +12,13 @@ const Footer = () => {
             <h3 className="font-outfit text-xl font-semibold text-black">Contact Us</h3>
             <div className="flex flex-col gap-2">
               <p className="font-outfit text-base text-black/70">
-                Phone: +91 7549205741
+                Phone: {siteConfig.contact.phone}
               </p>
               <p className="font-outfit text-base text-black/70">
-                Email: hello@peachpicasso.com
+                Email: {siteConfig.contact.email}
               </p>
               <p className="font-outfit text-base text-black/70">
-                Hours: Mon-Sat: 9AM - 7PM
+                Hours: {siteConfig.contact.businessHours}
               </p>
             </div>
           </div>
@@ -25,15 +27,11 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h3 className="font-outfit text-xl font-semibold text-black">Location</h3>
             <div className="flex flex-col gap-2">
-              <p className="font-outfit text-base text-black/70">
-                Ayanager, Pahse-V
-              </p>
-              <p className="font-outfit text-base text-black/70">
-                Near Kaal Bhairav Mandir
-              </p>
-              <p className="font-outfit text-base text-black/70">
-                New Delhi, Delhi 110001
-              </p>
+              {siteConfig.location.address.map((line, index) => (
+                <p key={index} className="font-outfit text-base text-black/70">
+                  {line}
+                </p>
+              ))}
             </div>
           </div>
 
@@ -42,7 +40,7 @@ const Footer = () => {
             <h3 className="font-outfit text-xl font-semibold text-black">Follow Us</h3>
             <div className="flex flex-col gap-3">
               <a 
-                href="https://instagram.com/theartist0514" 
+                href={siteConfig.social.instagram.url}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 font-outfit text-base text-black/70 hover:text-[#E12056] transition-colors"
@@ -59,10 +57,10 @@ const Footer = () => {
                     clipRule="evenodd" 
                   />
                 </svg>
-                @peachpicasso
+                {siteConfig.social.instagram.handle}
               </a>
               <a 
-                href="https://youtube.com/@theartiest0514" 
+                href={siteConfig.social.youtube.url}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 font-outfit text-base text-black/70 hover:text-[#FF0000] transition-colors"
@@ -79,7 +77,7 @@ const Footer = () => {
                     clipRule="evenodd" 
                   />
                 </svg>
-                Peach Picasso
+                {siteConfig.social.youtube.handle}
               </a>
             </div>
           </div>
@@ -88,7 +86,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-black/10">
           <p className="font-outfit text-sm text-center text-black/50">
-            © {currentYear} Peach Picasso. All rights reserved.
+            © {currentYear} {siteConfig.company.name}. All rights reserved.
           </p>
         </div>
       </div>

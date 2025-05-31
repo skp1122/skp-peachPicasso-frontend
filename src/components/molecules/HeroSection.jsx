@@ -2,11 +2,12 @@ import Button from '../atoms/Button';
 import Text from '../atoms/Text';
 import heroImage from '../../assets/heroSection1.png';
 import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/solid';
+import { siteConfig } from '../../config/siteConfig';
 
 const HeroSection = () => {
   const handleBooking = () => {
     // WhatsApp Business API URL
-    const phoneNumber = '917549205741'; // Your WhatsApp number without '+' or spaces
+    const phoneNumber = siteConfig.contact.phone.replace(/\D/g, ''); // Remove non-digits
     const message = 'Hello! I would like to book an appointment for makeup services.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

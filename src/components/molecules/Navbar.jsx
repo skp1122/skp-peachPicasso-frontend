@@ -2,10 +2,11 @@ import { useState } from 'react';
 import Button from '../atoms/Button';
 import logo from '../../assets/iconPeachPicasso.svg';
 import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/solid';
+import { siteConfig } from '../../config/siteConfig';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const phoneNumber = "+917549205741";
+  const phoneNumber = siteConfig.contact.phone;
 
   const handleWhatsAppClick = () => {
     const message = 'Hello! I would like to book an appointment for makeup services.';
